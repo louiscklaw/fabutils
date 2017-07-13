@@ -7,4 +7,7 @@ setup(name='fabutils',
       author_email='rajaravivarma.ar@gmail.com',
       license='MIT',
       packages=['fabutils'],
+      install_requires=[
+          'fabric'
+      ],
       zip_safe=False)
