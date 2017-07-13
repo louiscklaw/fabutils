@@ -1,0 +1,2 @@
+A set of utility methods to interact with the remote server using sudo user
+with the help of fabric
