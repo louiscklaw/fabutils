@@ -1,4 +1,23 @@
+from __future__ import print_function
+from fabric.api import local
 from fabric.api import sudo
+from os import path
+
+def archive(treeish, output):
+    """
+    Create an archive for the given git branch or commit, and return
+    the absolute path of the output archive file.
+
+    Arguments:
+    treeish -- A git branch or commit SHA
+    output -- the filename of the archive the format of the file will be
+    inferred from this argument
+    """
+    if format is None:
+        archive_cmd = 'git archive {treeish} --output={output}'.format(
+            treeish=treeish, output=output)
+    local(archive_cmd)
+    return path.realpath(output)
 
 def clone(sha, clone_link, clone_dir_name=''):
     """
