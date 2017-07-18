@@ -76,9 +76,9 @@ class FileUtils(object):
     def exists(self, path, verbose=False):
         exists_partial = partial(exists, path=path, verbose=verbose)
         if self._remote_context():
-            exists_partial(use_sudo=False)
+            return exists_partial(use_sudo=False)
         elif self._sudo_context():
-            exists_partial(use_sudo=True)
+            return exists_partial(use_sudo=True)
 
     def _execute(self, command):
         self.executor(command)
