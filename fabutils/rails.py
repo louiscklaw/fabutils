@@ -9,6 +9,15 @@ def bundle_install(args=''):
     """
     sudo('bundle install {}'.format(args))
 
+def bundle_exec(args):
+    """
+    Execute bundle exec with supplied arguments
+
+    Arguments:
+    args -- command that needs to be executed in the bundlers context
+    """
+    sudo('bundle exec {}'.format(args))
+
 def db_migrate(args=''):
     """
     Execute ./bin/rake db:migrate to run migrations
