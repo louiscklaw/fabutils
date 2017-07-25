@@ -17,3 +17,12 @@ def db_migrate(args=''):
     args -- Any additional options to be passed to the rake command
     """
     sudo('./bin/rake db:migrate {}'.format(args))
+
+def assets_precompile():
+    """
+    Execute ./bin/rake assets:precompile to compile assets
+    """
+    sudo('./bin/rake assets:precompile')
+
+
+asset_precompile = assets_precompile
