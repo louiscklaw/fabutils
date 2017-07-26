@@ -18,6 +18,15 @@ def bundle_exec(args):
     """
     sudo('bundle exec {}'.format(args))
 
+def bundle_update(gem):
+    """
+    Execute bundle update with supplied gem name
+
+    Arguments:
+    gem -- name of the gem to be updated
+    """
+    sudo('bundle update {}'.format(gem))
+
 def db_migrate(args=''):
     """
     Execute ./bin/rake db:migrate to run migrations
